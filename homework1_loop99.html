@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title></title>
+	<meta charset="utf-8" />
+    <style>
+        table {
+            border:solid 3px #DDDDDD;
+            margin:auto;
+            width:500px;
+        }
+        td {
+            border:solid 2px #DDDDDD;
+            background-color:lightpink;
+        }
+        td:nth-child(2n+1){
+            background-color:mistyrose;
+        }
+        p {
+            color:darkblue;
+            margin:0;
+        }
+        h2 {
+           text-align:center;
+        }
+    </style>
+    <script>
+        document.write("<h2>簡易版9X9乘法表</h2><table><tr>");
+        for (i = 1; i < 10; i++) {
+            document.write("<td><p>");
+            for (j = 1; j < 10; j++) {
+                document.write(i + "*" + j + "=" + (i * j) + "<br>");
+            }
+            document.write("</p></td>");
+        }
+        document.write("</tr></table>");
+
+
+
+        document.write("<h2>完整版9X9乘法表</h2> <table>");
+        for (i = 1; i < 10; i++) {
+            document.write("<tr>");
+
+            for (j = 1; j < 10; j++) {
+
+                equa = i + "*" + j + "=" + (i * j);
+                document.write("<td><p>" + equa + "</p></td>");
+            }
+            document.write("</tr>");
+        }
+        document.write("</table>");
+
+
+        function simplecol() {
+            document.write("<table><tr>");
+            for (i = 1; i < 10; i++) {
+                document.write("<td>");
+                for (j = 1; j < 10; j++) {
+                    document.write(i + "*" + j + "=" + (i * j)+"<br>");
+                }
+                document.write("</td>");
+            }
+            document.write("</tr></table>");
+        }
+
+        function fullcol() {
+            document.write("<table>");
+            for (i = 1; i < 10; i++) {
+                document.write("<tr>");
+
+                for (j = 1; j < 10; j++) {
+
+                    equa = i + "*" + j + "=" + (i * j);
+                    document.write("<td>" + equa + "</td>");
+                }
+                document.write("</tr>");
+            }
+            document.write("</table>");
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="完整9X9乘法表" onclick="fullcol()" />
+    <input type="button" value="簡易9X9乘法表" onclick="simplecol()" />
+</body>
+</html>
