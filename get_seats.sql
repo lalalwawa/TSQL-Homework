@@ -4,6 +4,7 @@
 
   輸入  sqlcmd -E -i gen_seats.sql     或在 SSMS 之 新增查詢視窗執行 
   */
+  /*
 DROP TABLE seats
 
 CREATE TABLE seats
@@ -13,8 +14,10 @@ CREATE TABLE seats
     sold CHAR(1),
     ordid INT
 )
+*/
 
-
+Create procedure gen_seats
+as
 
 BEGIN
 
@@ -29,7 +32,7 @@ DECLARE @seat VARCHAR(10)
 
 /*查詢影廳大小*/
 SET @x_ptime = '2016-12-25 13:00'
-SET @x_num = 1
+SET @x_num = 2
 SET @x_room = 'A'
 print @x_room
 SET @x_row = (SELECT seat_row FROM m_room WHERE roomid= @x_room)
