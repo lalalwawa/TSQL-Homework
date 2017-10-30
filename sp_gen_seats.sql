@@ -54,9 +54,10 @@ SET @j = 1
 END
 GO
 
-
+/*
 TRUNCATE TABLE seats
 SELECT * from seats
 EXEC gen_seats '2016-12-25 13:00', 1, 'A'
 SELECT * FROM seats WHERE movie=1
 GO
+*/
