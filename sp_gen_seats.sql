@@ -13,7 +13,7 @@
 
 
 
-CREATE PROCEDURE gen_seats ( @p_time DATETIME,
+CREATE PROCEDURE gen_seats2 ( @p_time DATETIME,
                              @p_num int,
                              @p_room VARCHAR(10)
 )
@@ -57,7 +57,7 @@ GO
 /*
 TRUNCATE TABLE seats
 SELECT * from seats
-EXEC gen_seats '2016-12-25 13:00', 1, 'A'
-SELECT * FROM seats WHERE movie=1
+EXEC gen_seats2 '2016-12-25 13:00', 3, 'A廳'
+SELECT * FROM seats WHERE movie=3
 GO
 */
